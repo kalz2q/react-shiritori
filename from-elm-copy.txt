@@ -87,9 +87,6 @@ view model =
         ]
 
 
-viewMemo : String -> Html Msg
-viewMemo memo =
-    li [] [ Html.text memo ]
 
 feedbackText : String -> String
 feedbackText string =

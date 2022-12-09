@@ -9,7 +9,7 @@ function App() {
 
   type Item = {
     id: number;
-    inputValue: string;
+    word: string;
   };
 
   const handleChange = (e: any) => {
@@ -21,16 +21,15 @@ function App() {
     // 新しい Todo を作成
     const newItem: Item = {
       id: items.length,
-      inputValue: inputValue
+      word: inputValue
     };
 
-    setItems([newItem, ...items]);
+    setItems([...items, newItem]);
     setInputValue("");
   };
 
   return (
     <div className="App">
-      <h1>しりとり</h1>
       <h1>ひらかなで入力して下さい</h1>
       <form onSubmit={(e) => handleSubmit(e)} className="inutText">
         <input
@@ -41,6 +40,13 @@ function App() {
           className="inputText"></input>
         <button type="submit" className="submitButton" >Submit</button>
       </form>
+      <ul className="container">
+        {items.map((item) => (
+          <li key={item.id}>
+            {item.id}:{item.word}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
