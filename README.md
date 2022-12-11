@@ -1,3 +1,2 @@
 # react-shiritori
-# react-shiritori
-elmから。大元はrubyの云々。
+elmから。おおもとはrubyの云々。
